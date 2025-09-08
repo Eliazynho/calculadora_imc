@@ -60,7 +60,34 @@ body {
   margin-top: 40px;
 }
 
-.rightSide {
+.container .rightSide {
   flex: 1;
   margin-left: 40px;
+  display: flex;
+}
+
+.container .rightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.container .rightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.container .rightSide .rightArrow {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  margin-top: 145px;
+  background-color: #227c9d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }

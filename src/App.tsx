@@ -1,15 +1,18 @@
 import imcImage from "./assets/powered.png";
 import styles from "./App.module.css";
+import { levels, calculateImc, Level } from "./helpers/imc";
 import { useState } from "react";
+import { GridItem } from "./components/GridItem";
+import leftArrowImage from "./assets/leftarrow.png";
 
 const App = () => {
   const [heightField, setHeightField] = useState<number>(0);
   const [weightField, setWeightField] = useState<number>(0);
+  const [showItem, setShowItem] = useState<Level | null>(null);
 
   const handleCalculateButton = () => {
     if (heightField > 0 && weightField > 0) {
-      const imc = weightField / (heightField * heightField);
-      console.log(imc);
+      setShowItem(calculateImc(heightField, weightField));
     } else {
       alert("Digite todos os campos.");
     }
@@ -45,7 +48,28 @@ const App = () => {
           />
           <button onClick={handleCalculateButton}>Calcular</button>
         </div>
-        <div className={styles.rightSide}>...</div>
+        <div className={styles.rightSide}>
+          {!showItem && (
+            <div className={styles.grid}>
+              {levels.map((item, key) => (
+                <GridItem key={key} item={item} />
+              ))}
+            </div>
+          )}
+          {showItem && (
+            <div className={styles.rightBig}>
+              <div className={styles.rightArrow}>
+                <img
+                  src={leftArrowImage}
+                  alt="Seta voltar"
+                  width={25}
+                  onClick={() => setShowItem(null)}
+                />
+              </div>
+              <GridItem item={showItem} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
