@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Calculadora de IMC 📊
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Available Scripts
+## 📖 Sobre o Projeto
 
-In the project directory, you can run:
+Este projeto é uma **Calculadora de Índice de Massa Corporal (IMC)** desenvolvida com o objetivo de democratizar o acesso a ferramentas de saúde. A aplicação foi criada pensando em pessoas que não têm acesso fácil a profissionais como personal trainers, oferecendo uma maneira simples e rápida de monitorar um indicador importante da sua saúde.
 
-### `npm start`
+Com uma interface limpa e intuitiva, qualquer pessoa pode inserir seu peso e altura para obter o resultado do IMC e sua respectiva classificação.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Funcionalidades
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Cálculo preciso do IMC baseado em peso e altura.
+- Exibição da classificação do resultado (ex: Abaixo do peso, Peso normal, Sobrepeso, etc.).
+- Interface responsiva para uso em desktops e dispositivos móveis.
+- Validação de campos para garantir que apenas dados válidos sejam inseridos.
 
-### `npm test`
+## 🚀 Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-### `npm run build`
+- **React:** Biblioteca para construção da interface de usuário.
+- **TypeScript:** Superset do JavaScript que adiciona tipagem estática ao código.
+- **CSS Modules** Para estilização.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Como Executar o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para rodar este projeto localmente, siga os passos abaixo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 1. Clone o repositório
+git clone [https://github.com/Eliazynho/calculadora_imc](https://github.com/Eliazynho/calculadora_imc)
 
-### `npm run eject`
+# 2. Acesse a pasta do projeto
+cd calculadora_imc
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 3. Instale as dependências
+npm install
+# ou
+yarn install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 4. Inicie a aplicação
+npm start
+# ou
+yarn start
+```

@@ -1,9 +1,9 @@
-import imcImage from "./assets/powered.png";
 import styles from "./App.module.css";
 import { levels, calculateImc, Level } from "./helpers/imc";
 import { useState } from "react";
 import { GridItem } from "./components/GridItem";
 import leftArrowImage from "./assets/leftarrow.png";
+import logoImg from "./assets/logo.png";
 
 const App = () => {
   const [heightField, setHeightField] = useState<number>(0);
@@ -22,7 +22,7 @@ const App = () => {
     <div className={styles.main}>
       <header>
         <div className={styles.headerContainer}>
-          <img src={imcImage} alt="Imc" />
+          <img src={logoImg} alt="Imc" />
         </div>
       </header>
       <div className={styles.container}>
@@ -39,14 +39,21 @@ const App = () => {
             placeholder="Digite o seu peso. Ex: 75.3 (em kg)"
             value={weightField > 0 ? weightField : ""}
             onChange={(e) => setWeightField(parseFloat(e.target.value))}
+            disabled={showItem ? true : false}
           />
           <input
             type="number"
             placeholder="Digite a sua altura. Ex: 1.50 (em metros)"
             value={heightField > 0 ? heightField : ""}
             onChange={(e) => setHeightField(parseFloat(e.target.value))}
+            disabled={showItem ? true : false}
           />
-          <button onClick={handleCalculateButton}>Calcular</button>
+          <button
+            onClick={handleCalculateButton}
+            disabled={showItem ? true : false}
+          >
+            Calcular
+          </button>
         </div>
         <div className={styles.rightSide}>
           {!showItem && (
